@@ -6,7 +6,7 @@ const db=require('../models/index');
 router.get('/',(req,res,next)=>{
   db.User.findAll().then(usrs=>{
     var data={
-      title:'Users/Index',
+      title:'ユーザー一覧',
       content:usrs
     }
     res.render('users/index',data);
